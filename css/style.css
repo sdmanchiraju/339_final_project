@@ -68,6 +68,7 @@ footer p{
     line-height: 1.4;
 }
 
+/* Grid Styling */
 .grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -106,17 +107,42 @@ footer p{
     justify-content: center;
 }
 
+/* Flex Styling */
+.flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+    padding: 10px;
+    margin: 10px;
+    border: 3px solid navy;
+	text-align: center;
+	font-size: 30px;
+    overflow: visible;
+}
 
 @media screen and (min-width: 480px){
     .grid{
         grid-template-columns: 1fr 1fr 1fr;
-
     }
+    .flex img {
+        object-fit: cover;
+        vertical-align: bottom;
+    }
+      
 }  
 
 @media screen and (min-width: 800px){
     .grid{
         grid-template-columns: 1fr 1fr 1fr 1fr;
-
+    }
+    .flex img {
+        object-fit: cover;
+        height: auto;
+        vertical-align: middle;
     }
 }
