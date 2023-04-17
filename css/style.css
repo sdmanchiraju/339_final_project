@@ -11,7 +11,16 @@ a{
     color: #154c71;
     text-decoration: none;
 }
-  
+
+.skip a{
+    top: -40px;
+    position: absolute;
+}
+
+.skip a:focus{
+    top: 20px;
+    position: absolute;
+}
 /* Header */  
 header{
     background-color: #fff;
