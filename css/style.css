@@ -3,7 +3,7 @@ body{
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background-color: #f5f5f5;
+    background-color: #feffff;
     color: #333;
 }
   
@@ -21,6 +21,16 @@ a{
     top: 20px;
     position: absolute;
 }
+
+.active a{
+    color: maroon;
+    text-decoration: underline;
+}
+
+h2{
+    color: steelblue;
+}
+
 /* Header */  
 header{
     background-color: #fff;
@@ -86,7 +96,6 @@ footer p{
     margin: 10px;
     justify-content: center;
     align-self: center;
-/* Add a solid black 3px border and round the corners */
 	border: 3px solid navy;
 	text-align: center;
 	font-size: 30px;
@@ -116,42 +125,80 @@ footer p{
     justify-content: center;
 }
 
-/* Flex Styling */
-.flex{
+figcaption { opacity: 0; } 
+
+.flex {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-
+    justify-content: center;
     align-items: center;
-    align-content: center;
-    gap: 10px;
-    padding: 10px;
-    margin: 10px;
-    border: 3px solid navy;
-	text-align: center;
-	font-size: 30px;
-    overflow: visible;
-}
+    border: 3px solid maroon;
+    flex-direction: row;
+    background-color: azure;
+  }
+  
+  figure {
+    width: 33.33%;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  figcaption {
+    text-align: center;
+    margin-top: 5px;
+  }
 
-@media screen and (min-width: 480px){
+@media screen and (min-width: 500px){
     .grid{
         grid-template-columns: 1fr 1fr 1fr;
+        background-color: azure;
     }
-    .flex img {
-        object-fit: cover;
-        vertical-align: bottom;
+
+    figcaption { opacity: 0; }
+
+    .flex {
+      justify-content: space-around;
     }
-      
 }  
+
+@media screen and (min-width: 600px){
+    .grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        background-color: rgb(246, 240, 255);
+    }
+
+    .flex{
+        background-color: rgb(246, 240, 255);
+    }
+    figcaption { opacity: 1; }
+
+    figure {
+        width: 25%;
+    }
+
+}
 
 @media screen and (min-width: 800px){
     .grid{
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        background-color: rgb(240, 255, 244);
     }
-    .flex img {
-        object-fit: cover;
-        height: auto;
-        vertical-align: middle;
+    
+    .flex{
+        background-color: rgb(240, 255, 244);
     }
+
+    figure {
+        width: 20%;
+    }
+
+    figcaption {
+        opacity: 1; 
+        font-weight: bold;
+        color: maroon;
+    }
+
 }
