@@ -114,7 +114,8 @@ form label {
 }
 
 form li .req{
-    color: red;
+    color: rgb(181, 11, 11);
+    font-size: 20px;
 }
 
 form ul {
