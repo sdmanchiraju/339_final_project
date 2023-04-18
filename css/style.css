@@ -98,6 +98,37 @@ section p{
     font-size: 18px;
     line-height: 1.6;
 }
+
+/* form styling */
+form {
+    max-width: 100%;
+    display: block;
+    justify-self: center;
+    }
+
+form label {
+    display: block;
+    margin: 0 0 0.5em 0;
+    color: purple;
+    font-weight: bold;
+}
+
+form li .req{
+    color: red;
+}
+
+form ul {
+    list-style: none;
+}
+
+.formContainer{
+    border: solid black 2px;
+    justify-content: center;
+    justify-self: center;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
   
 /* Footer */
 footer{
@@ -188,7 +219,7 @@ figcaption {
 /* Media query for the smallest screen, mobile view */
 @media screen and (min-width: 300px){
     /* hide the images in flex and grid when in mobile view */
-    h2{
+    .formContainer, form, h2{
         visibility: hidden;
     }
     .flex, .grid {
@@ -210,7 +241,7 @@ figcaption {
         display: inline-flex;
         background-color: rgb(246, 240, 255);
     }
-    h2{
+    .formContainer, form, h2{
         visibility: visible;
     }
     figcaption { opacity: 0; }
