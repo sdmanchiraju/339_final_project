@@ -35,6 +35,41 @@ a{
     margin-right: auto;
 }
 
+#main ul{
+    list-style: inside;
+    margin: 5px;
+	padding: 5px;
+	border: 5px;
+}
+
+#main ol{
+    list-style: decimal;
+    margin: 25px;
+}
+
+h1, h2, p{
+    margin: 5px;
+	border: 5px;
+    padding: 15px;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 30px;
+}
+h2{
+    font-weight: bold;
+    font-size: 20px;
+}
+p{
+    font-size: 14px;
+}
+
+img, figure, figcaption{
+    padding: 10px;
+    margin: 2px;
+}
+
 /* Header */  
 header{
     background-color: #fff;
@@ -165,9 +200,8 @@ figcaption {
 }
 
 
-@media screen and (min-width: 500px){
-
-
+/* Media query for the smallest screen, mobile view */
+@media screen and (min-width: 300px){
     /* hide the images in flex and grid when in mobile view */
     h2{
         visibility: hidden;
@@ -177,7 +211,8 @@ figcaption {
     }
 }  
 
-@media screen and (min-width: 600px){
+/* Media query for the medium sized screen, tablet view */ 
+@media screen and (min-width: 500px){
     /* show the images in grid*/
     .grid{
         display: inline-grid;
@@ -199,6 +234,7 @@ figcaption {
     }
 }
 
+/* Media query for the large sized screen, desktop view */ 
 @media screen and (min-width: 800px){
     .grid{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
