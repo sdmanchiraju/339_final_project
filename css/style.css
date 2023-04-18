@@ -27,8 +27,12 @@ a{
     text-decoration: underline;
 }
 
-h2{
-    color: steelblue;
+.pic{
+    height: 25%;
+    width: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Header */  
@@ -125,6 +129,15 @@ footer p{
     justify-content: center;
 }
 
+h1{
+    color: steelblue;
+    text-align: center;
+}
+
+h2{
+    color: steelblue;
+    text-align: center;
+}
 figcaption { opacity: 0; } 
 
 .flex {
@@ -135,50 +148,55 @@ figcaption { opacity: 0; }
     border: 3px solid maroon;
     flex-direction: row;
     background-color: azure;
-  }
+}
   
-  figure {
+figure {
     width: 33.33%;
-  }
+}
   
-  img {
+img {
     width: 100%;
     height: auto;
-  }
+}
   
-  figcaption {
+figcaption {
     text-align: center;
     margin-top: 5px;
-  }
+}
+
 
 @media screen and (min-width: 500px){
-    .grid{
-        grid-template-columns: 1fr 1fr 1fr;
-        background-color: azure;
+
+
+    /* hide the images in flex and grid when in mobile view */
+    h2{
+        visibility: hidden;
     }
-
-    figcaption { opacity: 0; }
-
-    .flex {
-      justify-content: space-around;
+    .flex, .grid {
+      display: none;
     }
 }  
 
 @media screen and (min-width: 600px){
+    /* show the images in grid*/
     .grid{
+        display: inline-grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         background-color: rgb(246, 240, 255);
     }
 
-    .flex{
+    /* show the images in flex but hide the captions */
+    .flex {
+        display: inline-flex;
         background-color: rgb(246, 240, 255);
     }
-    figcaption { opacity: 1; }
-
+    h2{
+        visibility: visible;
+    }
+    figcaption { opacity: 0; }
     figure {
         width: 25%;
     }
-
 }
 
 @media screen and (min-width: 800px){
@@ -186,19 +204,17 @@ figcaption { opacity: 0; }
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         background-color: rgb(240, 255, 244);
     }
-    
+
+    /* show the images and the captions in flex */
     .flex{
         background-color: rgb(240, 255, 244);
     }
-
     figure {
         width: 20%;
     }
-
     figcaption {
         opacity: 1; 
         font-weight: bold;
         color: maroon;
     }
-
 }
