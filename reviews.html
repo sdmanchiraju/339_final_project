@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Ann Arbor Coffee</title>
 </head>
@@ -33,7 +32,41 @@
                 <li>Common Cup</li>
                 <li>Comet Coffee</li>
                 <li>Sweetwaters Coffee & Tea</li>
-            </ol>
+            </ol>  
+        </ul>
+    <div class="row header">
+      <h2>Let us know what you think!</h2>
+    <div class="formContainer">
+      <form action="https://formspree.io/f/xnqydbqo"
+      method="POST">
+        <ul>
+          <li>
+            <label for="first_name">First name: </label>
+            <input type="text" name="first_name" placeholder="Anna" />
+        </li>
+        <br>
+        <li>
+            <label for="last_name">Last name: </label>
+            <input type="text" name="last_name" placeholder="Smith" />     
+        </li>
+        <br>
+        <li>
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" name="Email" placeholder="coffee.lover@gmail.com" />
+        </li>
+        <br>        
+        <li><div class="divider"></div></li>
+        <li>
+        <label for="comments">What is your favorite Ann Arbor Coffee Shop?</label>
+        <textarea cols="46" rows="3" name="comments" placeholder="I love Vertex coffee shop"></textarea>
+        </li>
+          
+         <li>
+        <input class="submit" type="submit" value="Submit" />
+        </li>
+      </form>  
+    </div>
+    <br>
     </main>
     <footer>
         <p>University of Michigan School of Information <br/>
